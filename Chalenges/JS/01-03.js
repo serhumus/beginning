@@ -15,7 +15,7 @@ possui=function(agulha, palheiro){
     }
 }
 
-var skills=["C++", "Python", "PHP", "Java", "JavaScript", 
+var skills=["C++", "Python", "PHP", "Java", "JavaScript",
 "React", "Angular"];
 
-possui("Javascript", skills);
+possui("javascript", skills);

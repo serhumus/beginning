@@ -30,7 +30,6 @@ pares=function(x, y){
         }
         x1++;
     }
-    
-}
-pares(450,30);
 
+}
+pares(300,30);

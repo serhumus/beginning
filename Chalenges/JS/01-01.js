@@ -21,10 +21,10 @@ var endereco = {
   };
 
 
- document.write( "<h2>O usuário mora em ",
+ console.log( "O usuário mora em ",
     endereco['cidade'],"/",
     endereco['uf']," na região ",
     endereco['bairro']," na rua ",
     endereco['rua'],", ",
-    endereco['numero'],".</h2>"
+    endereco['numero'],"."
 );

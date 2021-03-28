@@ -25,4 +25,11 @@ var usuarios = [
     habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
     }
     ];
-    
+
+      res= function (x){
+        x.forEach(showNmSkill(item));
+      }
+
+      showNmSkill=function(y){
+        y.forEach(console.log(item));
+      }
