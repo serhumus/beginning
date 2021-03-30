@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valores</title>
+    <style>
+        #ff{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(207,247,255,1) 100%);
+            //https://cssgradient.io/
+        }
+    </style>
+</head>
+<body>
+    <h1>Valores máximos e mínimos para anunciar</h1>
+    <hr>
+    <p>Apenas digite o valor mínimo que o cliente aceita na mão.</p>
+
+    <p id="aceita"></p>
+            <input type="text" id="valor" name="valor" placeholder="180" onkeyup="consol()">
+            <input type="text" name="percentagem" id="percentagem" onkeyup="percentagemToBrStyle()" placeholder="6%">
+            <input type="submit" onclick="valores()" value="Calcular">
+    <p id="result"></p>
+    <script src="valueReplace.js"></script>
+</body>
+</html>
