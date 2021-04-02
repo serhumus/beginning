@@ -18,13 +18,18 @@ var endereco = {
     bairro: "Centro",
     cidade: "São Paulo",
     uf: "SP"
-  };
+};
 
+returnList=function(){
+	console.log(
+		"O usuário mora em ",
+		endereco['cidade'],"/",
+		endereco['uf']," na região ",
+		endereco['bairro']," na rua ",
+		endereco['rua'],", ",
+		endereco['numero'],"."
+	);
+};
 
- console.log( "O usuário mora em ",
-    endereco['cidade'],"/",
-    endereco['uf']," na região ",
-    endereco['bairro']," na rua ",
-    endereco['rua'],", ",
-    endereco['numero'],"."
-);
+returnList();
+
