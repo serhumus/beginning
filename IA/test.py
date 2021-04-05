@@ -3,11 +3,12 @@ from selenium import webdriver
 #Script to response arithmetic question on arithmetic.zetamac.com..
 #https://arithmetic.zetamac.com/game?key=72740d67 refeer to 30s test
 #enjoy yourself!
-
+#This script was make on linux 64 bits and depend of a driver browser, in this classe
+#i use the chrome driver, that can be downloaded here: https://chromedriver.chromium.org/downloads
 
 driver=webdriver.Chrome('/home/ser/Documents/Development/DriversToBrowser/80-0-3987-16/Chrome/chromedriver')
 class Bot1:
-	
+
 
 
 	def open(self, url):
@@ -20,7 +21,7 @@ class Bot1:
 
 	def getTxtFromClass(self,x):
 		return driver.find_element_by_class_name(x).text
-	
+
 	def parsprob(self,x):
 		a=[]
 		b=[]
@@ -33,10 +34,10 @@ class Bot1:
 		print(x)
 		for i in range(0,p1):
 			a.append(x[i])
-			
+
 		for i in range(p2+1,len(x)):
-			b.append(x[i])	
-		
+			b.append(x[i])
+
 		for i in x:
 			if i=='÷':
 				Op='d'
@@ -44,13 +45,13 @@ class Bot1:
 				Op='m'
 			if i=='–' or i=='+':
 				Op=i
-		
+
 		print(Op)
-				
+
 		print(a,b)
-		
+
 		a1=""
-		b1=""	
+		b1=""
 
 		for i in a:
 			a1=a1+str(i)
