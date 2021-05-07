@@ -1,0 +1,54 @@
+Saiba quem somos através de quem já atendemos:
+<div id=CarrReviews style="height:100px">
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fotavionv10%2Fposts%2F1039106839868838&width=500&show_text=true&height=137&appId" width="500" height="137" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fjosevan.alexandre%2Fposts%2F1701379300016708&width=500&show_text=true&height=176&appId" width="500" height="176" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fleona.jhovs%2Fposts%2F3318164094905764&width=500&show_text=true&height=157&appId" width="500" height="157" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Felisandra.lima.357%2Fposts%2F1751273414926241&width=500&show_text=true&height=222&appId" width="500" height="222" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fpermalink.php%3Fstory_fbid%3D203085147895167%26id%3D100045810501780&width=500&show_text=true&height=137&appId" width="500" height="137" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fmegatero%2Fposts%2F10164071382250368&width=500&show_text=true&height=137&appId" width="500" height="137" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fcelia.marcondes%2Fposts%2F10160282820671521&width=500&show_text=true&height=156&appId" width="500" height="156" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Flgr.castro%2Fposts%2F10214188977478236&width=500&show_text=true&height=137&appId" width="500" height="137" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</div>
+
+<script>
+    let reviewsNumbers=document.querySelectorAll('div#CarrReviews > iframe').length;
+    let currentReview=0;
+    for (let i=0; i <reviewsNumbers; i++){
+        document.querySelectorAll('div#CarrReviews > iframe')[i].setAttribute("style","display:none;")
+    }
+    function slideOn(){
+        document.querySelectorAll('div#CarrReviews > iframe')[currentReview].setAttribute("style","display:block;")
+    }
+    
+    function slideOff(){
+        document.querySelectorAll('div#CarrReviews > iframe')[currentReview].setAttribute("style","display:none;")
+    }
+    
+    function countManager(){
+    if(currentReview==reviewsNumbers){
+            currentReview=0;
+        }
+    }
+    
+    function hideReview(){
+        slideOff();
+        currentReview++;
+    }
+    
+    function auto(){
+        countManager();
+        slideOn();
+        setTimeout(hideReview, 3500);
+    }
+    
+    setInterval(auto, 3700)
+</script>
