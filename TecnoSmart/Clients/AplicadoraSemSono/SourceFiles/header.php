@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Aplicadora Sem Sono </title>
-        <!--Bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body class="d-flex flex-column">
@@ -16,6 +15,9 @@
             border: solid rgba(0, 0, 0, .15);
             border-width: 1px 0;
             box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+            .buttonActiveOnMenu{
+              background-color: rgba(210, 190, 77, 0.761);
             }
             .WhatsAppButton{
                 display: block;
@@ -44,41 +46,37 @@
               <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <?php
-                  $menuLinks=array("Home" =>"index.php", "Galeria" =>"galeria.php", "Serviços" =>"servicos.php", "Galeria" =>"galeria.php", "Contato" =>"contato.php", )
+                  $menuLinks=array("Home" =>"index.php", "Empresa" =>"empresa.php",  "Galeria" =>"galeria.php", "Serviços" =>"servicos.php", "Galeria" =>"galeria.php", "Contato" =>"contato.php", );
                   
-                  public function DisplayMenu($menuLinks){
+                  function DisplayMenu($menuLinks){
                     while (list($name, $url) = each($menuLinks)){
-                      $this -> DisplayButton($name, $url, !$this->IsURLCurrentPage($url));
+                      DisplayButton($name, $url, !IsURLCurrentPage($url));
                     }
                   }  
                   
-                  public function IsURLCurrentPage($link){
-                    if(strpos($_SERVER['PHP_SELF'], $link)==false){
+                  function IsURLCurrentPage($linkAdress){
+                    if(strpos($_SERVER['PHP_SELF'], $linkAdress)==false){
                       return false;
                     }
                     else{
                       return true;
                     }
                   }
-                  //implement DisplayButton funcion
-
-                
+                  
+                  function DisplayButton($name, $url, $active=true){
+                    if ($active){
+                      echo "<li class=\"nav-item\">
+                      <a class=\"nav-link active\" aria-current=\"page\" href=\"$url\">$name</a>
+                    </li>";
+                    }
+                    else{
+                      echo "<li class=\"nav-item buttonActiveOnMenu\">
+                      <span class=\"nav-link active\" aria-current=\"page\">$name</span>
+                    </li>";
+                    }
+                  }
+                   DisplayMenu($menuLinks);
                 ?>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Empresa</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Serviços</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Galeria</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Contato</a>
-                  </li>
                  </ul>
               </div>
             </div>
