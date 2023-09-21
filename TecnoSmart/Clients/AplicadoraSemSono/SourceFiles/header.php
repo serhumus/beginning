@@ -16,9 +16,13 @@
             border-width: 1px 0;
             box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
             }
+
             .buttonActiveOnMenu{
-              background-color: rgba(210, 190, 77, 0.761);
+              border-color: rgba(210, 190, 77, 0.761);
+              border-width: 0px 0px thick 0px;
+              border-style: dotted;
             }
+
             .WhatsAppButton{
                 display: block;
                 top: 84%;
@@ -37,16 +41,16 @@
           </style>
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="Fourth navbar example">
-            <div class="container-fluid" style="color: rgba(210, 190, 77, 0.761)">
-              <a class="navbar-brand bs-yellow" href="#">APLICADORA SEM SONO</a>
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.php"><img src="../assets/logo.png" width="84" height="84"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
         
               <div class="collapse navbar-collapse" id="navbarsExample04">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <ul class="navbar-nav">
                 <?php
-                  $menuLinks=array("Home" =>"index.php", "Empresa" =>"empresa.php",  "Galeria" =>"galeria.php", "Serviços" =>"servicos.php", "Galeria" =>"galeria.php", "Contato" =>"contato.php", );
+                  $menuLinks=array("Home" =>"index.php", "Empresa" =>"empresa.php",  "Galeria" =>"galeria.php", "Serviços" =>"servicos.php", "Galeria" =>"galeria.php", "Contato" =>"contato.php");
                   
                   function DisplayMenu($menuLinks){
                     while (list($name, $url) = each($menuLinks)){
@@ -65,13 +69,13 @@
                   
                   function DisplayButton($name, $url, $active=true){
                     if ($active){
-                      echo "<li class=\"nav-item\">
+                      echo "<li class=\"nav-item mb-3\">
                       <a class=\"nav-link active\" aria-current=\"page\" href=\"$url\">$name</a>
                     </li>";
                     }
                     else{
-                      echo "<li class=\"nav-item buttonActiveOnMenu\">
-                      <span class=\"nav-link active\" aria-current=\"page\">$name</span>
+                      echo "<li class=\"nav-item buttonActiveOnMenu  mb-3\">
+                      <span class=\"nav-link active py-0\" aria-current=\"page\">$name</span>
                     </li>";
                     }
                   }
