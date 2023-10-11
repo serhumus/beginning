@@ -39,7 +39,7 @@
             }
 
           </style>
-
+      <div class="row">              
         <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="Fourth navbar example">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.php"><img src="../assets/header/logo210.png" width="84" height="84"></a>
@@ -85,3 +85,4 @@
               </div>
             </div>
           </nav>
+        </div>
