@@ -1,9 +1,10 @@
-<div class="row" style="max-height: 140px; min-height: 140px;"><div class="b-example-divider"></div>          
-  <div class="container bg-dark cardtecnosmart">
-    <footer class="d-flex flex-wrap justify-content-end align-items-center py-3 my-4 border-top border-bottom">
-      <ul class="nav col-md-4 list-unstyled d-flex">
+<div class="container px-5">
+<div class="b-example-divider"></div>          
+  <div class="row bg-dark cardtecnosmart" style="max-height: 140px; min-height: 140px;">
+    <footer class="d-flex justify-content-end align-items-center my-4 border-top border-bottom">
+      <ul class="nav list-unstyled">
         <li>
-          <span class="mb-3 px-5 text-white">© 2023</span>
+          <span class="text-white mx-5">© 2023</span>
         </li>
         <li>
           <span class="text-white ">Developed by <a class="text-white" href="https://www.tecnosmart.com.br">Tecno Smart</a></span>

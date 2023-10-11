@@ -1,3 +1,9 @@
+<?php
+    //ini_set('display_errors', 1);
+    //ini_set('display_startup_errors', 1);
+    //error_reporting(E_ALL);
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
     <head>
@@ -9,6 +15,13 @@
     </head>
     <body class="d-flex flex-column">
         <style>
+            div.customizedBanner {
+              overflow: hidden;        
+              -width: 300px;
+              background-size: 140%;
+              background-position: 49% 70%;
+            }
+
             .b-example-divider {
             height: 1.4rem;
             background-color: rgba(210, 190, 77, 0.761);
@@ -25,7 +38,7 @@
 
             .WhatsAppButton{
                 display: block;
-                top: 84%;
+                top: 77%;
                 left: 70%;
                 position: fixed!important;
                 z-index: 99999;
@@ -34,55 +47,53 @@
             @media only screen and (min-width: 438px){
                 /* For Mobile: */
                 .WhatsAppButton{
-                    left: 85%;
+                    left: 77%;
                 }
             }
 
           </style>
-      <div class="row">              
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="Fourth navbar example">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.php"><img src="../assets/header/logo210.png" width="84" height="84"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-        
-              <div class="collapse navbar-collapse" id="navbarsExample04">
-                <ul class="navbar-nav">
-                <?php
-                  $menuLinks=array("Home" =>"index.php", "Empresa" =>"empresa.php",  "Galeria" =>"galeria.php", "Serviços" =>"servicos.php", "Galeria" =>"galeria.php", "Contato" =>"contato.php");
-                  
-                  function DisplayMenu($menuLinks){
-                    while (list($name, $url) = each($menuLinks)){
-                      DisplayButton($name, $url, !IsURLCurrentPage($url));
-                    }
-                  }  
-                  
-                  function IsURLCurrentPage($linkAdress){
-                    if(strpos($_SERVER['PHP_SELF'], $linkAdress)==false){
-                      return false;
-                    }
-                    else{
-                      return true;
-                    }
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="Fourth navbar example">                 
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php"><img src="../assets/header/logo210.png" width="84" height="84"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+              <ul class="navbar-nav">
+              <?php
+                $menuLinks=array("Home" =>"index.php", "Empresa" =>"empresa.php",  "Galeria" =>"galeria.php", "Serviços" =>"servicos.php", "Galeria" =>"galeria.php", "Contato" =>"contato.php");
+                
+                function DisplayMenu($menuLinks){
+                  while (list($name, $url) = each($menuLinks)){
+                    DisplayButton($name, $url, !IsURLCurrentPage($url));
                   }
-                  
-                  function DisplayButton($name, $url, $active=true){
-                    if ($active){
-                      echo "<li class=\"nav-item mb-3\">
-                      <a class=\"nav-link active\" aria-current=\"page\" href=\"$url\">$name</a>
-                    </li>";
-                    }
-                    else{
-                      echo "<li class=\"nav-item buttonActiveOnMenu  mb-3\">
-                      <span class=\"nav-link active py-0\" aria-current=\"page\">$name</span>
-                    </li>";
-                    }
+                }  
+                
+                function IsURLCurrentPage($linkAdress){
+                  if(strpos($_SERVER['PHP_SELF'], $linkAdress)==false){
+                    return false;
                   }
-                   DisplayMenu($menuLinks);
-                ?>
-                 </ul>
-              </div>
+                  else{
+                    return true;
+                  }
+                }
+                
+                function DisplayButton($name, $url, $active=true){
+                  if ($active){
+                    echo "<li class=\"nav-item mb-3\">
+                    <a class=\"nav-link active\" aria-current=\"page\" href=\"$url\">$name</a>
+                  </li>";
+                  }
+                  else{
+                    echo "<li class=\"nav-item buttonActiveOnMenu  mb-3\">
+                    <span class=\"nav-link active py-0\" aria-current=\"page\">$name</span>
+                  </li>";
+                  }
+                }
+                DisplayMenu($menuLinks);
+              ?>
+              </ul>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>

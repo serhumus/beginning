@@ -1,7 +1,5 @@
 <?php 
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
-require('header.php'); 
-require('contentEmpresa.html');
-require('footer.php'); ?>
+    require('header.php'); 
+    require('contentEmpresa.html');
+    require('footer.php'); 
+?>
