@@ -62,8 +62,9 @@
                 $(".cardtecnosmart").hide("slow")
             };
             
-            //Load prime link to whatsapp
+            //Load prime link to whatsapp and footer
             showWhatsappButton()
+            $(".cardtecnosmart").show("slow")
 
             var lastScrollTop = 0;
             $(window).scroll(function(event){

@@ -1,21 +1,27 @@
-<div class="container px-5">
+<div class="container pt-5">
 <div class="b-example-divider"></div>          
-  <div class="row bg-dark cardtecnosmart" style="max-height: 140px; min-height: 140px;">
-    <footer class="d-flex justify-content-between align-items-center my-4 border-top border-bottom">
-      <ul class="d-grid list-unstyled">
+  <div class="row bg-dark cardtecnosmart" style="max-height: 210px; min-height: 210px;">
+    <footer class="d-flex grid justify-content-center align-items-center my-4 border-top border-bottom">
+      <ul class="list-unstyled">
         <li>
-          <span class="text-white mx-5">Rua Treze de Maio, 954 - Bela Vista, São Paulo - SP, 01327-000</span>
+          <span class="text-white">Rua Treze de Maio, 954 - Bela Vista, São Paulo - SP, 01327-000</span>
+        </li>
+        <li>
+          <span class="text-white">Telefone: (11)2242-6477</span>
+        </li>
+        <li>
+          <span class="text-white">Whatsapp: (11)999 670 572</span>
         </li>
       </ul>
-      <ul class="nav list-unstyled">
+    </footer>
+    <ul class="nav list-unstyled justify-content-end">
         <li>
-          <span class="text-white mx-5">© 2023</span>
+          <span class="text-white mx-1">2023 ©</span>
         </li>
         <li>
           <span class="text-white ">Developed by <a class="text-white" href="https://www.tecnosmart.com.br">Tecno Smart</a></span>
         </li>
       </ul>
-    </footer>
   </div>
   <div class="b-example-divider"></div> 
 </div>
