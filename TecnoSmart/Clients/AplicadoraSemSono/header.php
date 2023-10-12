@@ -50,9 +50,15 @@
                     left: 77%;
                 }
             }
-
           </style>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="Fourth navbar example">                 
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top darkedMenuTop" aria-label="Fourth navbar example" style="background-image: url('../assets/galeria/WhatsApp%20Image%202023-09-18%20at%2012.20.43%20(3).jpeg'); background-repeat: no-repeat; background-position: 49% 70%; background-size: 154%;">         
+      <style>
+        .darkedMenuTop:after{
+          content:'';
+          background: rgb(0, 0, 0);
+        }
+
+      </style>        
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php"><img src="../assets/header/logo210.png" width="84" height="84"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +66,7 @@
             </button>
       
             <div class="collapse navbar-collapse" id="navbarsExample04">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav" style="text-shadow: rgb(0, 0, 0) 70px 0 140px;">
               <?php
                 $menuLinks=array("Home" =>"index.php", "Empresa" =>"empresa.php",  "Galeria" =>"galeria.php", "Serviços" =>"servicos.php", "Galeria" =>"galeria.php", "Contato" =>"contato.php");
                 
@@ -82,7 +88,7 @@
                 function DisplayButton($name, $url, $active=true){
                   if ($active){
                     echo "<li class=\"nav-item mb-3\">
-                    <a class=\"nav-link active\" aria-current=\"page\" href=\"$url\">$name</a>
+                    <a class=\"nav-link active\" style=\"text-shadow: rgb(0, 0, 0) 1px 1px 7px;\" aria-current=\"page\" href=\"$url\">$name</a>
                   </li>";
                   }
                   else{
