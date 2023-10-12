@@ -1,7 +1,12 @@
 <div class="container px-5">
 <div class="b-example-divider"></div>          
   <div class="row bg-dark cardtecnosmart" style="max-height: 140px; min-height: 140px;">
-    <footer class="d-flex justify-content-end align-items-center my-4 border-top border-bottom">
+    <footer class="d-flex justify-content-between align-items-center my-4 border-top border-bottom">
+      <ul class="d-grid list-unstyled">
+        <li>
+          <span class="text-white mx-5">Rua Treze de Maio, 954 - Bela Vista, São Paulo - SP, 01327-000</span>
+        </li>
+      </ul>
       <ul class="nav list-unstyled">
         <li>
           <span class="text-white mx-5">© 2023</span>
