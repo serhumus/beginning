@@ -12,6 +12,9 @@
         <li>
           <span class="text-white">Whatsapp: (11)999 670 572</span>
         </li>
+        <li>
+          <span class="text-white">Celular: (11)971 803 810</span>
+        </li>
       </ul>
     </footer>
     <ul class="nav list-unstyled justify-content-end">
