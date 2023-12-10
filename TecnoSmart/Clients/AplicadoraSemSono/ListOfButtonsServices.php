@@ -5,7 +5,8 @@
         function listOfButtons($argumentsOfFloor){
             $howManyItems=0;
             echo '<div class="accordion" id="accordianLike">';
-            while(list($name,$argument)=each($argumentsOfFloor)){
+//            while(list($name,$argument)=each($argumentsOfFloor)){
+			foreach($argumentsOfFloor as $name => $argument){
                 echo '<div class="accordion-item align-items-center">';
                 echo "<div class=\"d-grid accordion-header\" id=\"heading$howManyItems\">";
                 displayButtons($howManyItems, $name);

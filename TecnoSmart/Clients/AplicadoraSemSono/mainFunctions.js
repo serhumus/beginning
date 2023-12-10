@@ -32,6 +32,19 @@
             changerImg(internalPoint)
         }
 
+//Modal functions:
+		function hideModal()
+		{
+			$("#exampleModal").modal('hide')
+		}
+		
+		function showModal()
+		{
+			$("#exampleModal").modal('show')
+		}
+
+
+
         function randomNumberInRange(min,max){
             return Math.floor(
                 Math.random()*(max-min)+min
@@ -42,14 +55,11 @@
             staticImageElement.src=arrayOfImgs[x]
             let url="url('"+arrayOfImgsSlashed[x]+"')"
             zoomedImageElement.style.backgroundImage=url
-            console.log(url)
         }
        
         var imageRandomHomePage=document.getElementById("randomImg") 
         function changerRandomImg(){
-            console.log(imageRandomHomePage.src)
             imageRandomHomePage.src=arrayOfImgs[randomNumberInRange(0, xElements)]
-            console.log(imageRandomHomePage.src)
         }
 
             //function to Whatsapp buttom and footer card to tecnosmart.com.br indication

@@ -30,18 +30,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-       <!-- Button trigger modal -->
-       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-      </button>
-      <script>$("#exampleModal").modal('show')</script>
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Pesquisa:</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h5 class="modal-title" id="exampleModalLabel">Buscando melhorar</h5>
+              <button type="button" onclick="hideModal()" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -49,8 +44,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               Estamos trabalhando para melhorar a experiência no nosso site, por isso utilizamos cookies, concorda com os nossos esforços?
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Sim!</button>
-              <button type="button" class="btn btn-primary">Não...</button>
+              <button type="button" onclick="hideModal()" class="btn btn-secondary" data-dismiss="modal">Sim!</button>
+              <button type="button" onclick="hideModal()" class="btn btn-primary">Não...</button>
             </div>
           </div>
         </div>
@@ -151,3 +146,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </nav>
+<script>setTimeout(()=>{showModal()},2000)</script>
