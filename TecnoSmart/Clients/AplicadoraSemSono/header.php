@@ -44,7 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               Estamos trabalhando para melhorar a experiência no nosso site, por isso utilizamos cookies, concorda com os nossos esforços?
             </div>
             <div class="modal-footer">
-              <button type="button" onclick="hideModal()" class="btn btn-secondary" data-dismiss="modal">Sim!</button>
+              <button type="button" onclick="acceptCookie()" class="btn btn-secondary" data-dismiss="modal">Sim!</button>
               <button type="button" onclick="refuseCookie()" class="btn btn-primary">Não...</button>
             </div>
           </div>
@@ -113,10 +113,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						{
 							DisplayButton($name, $url, !IsURLCurrentPage($url));
 						}
-//Function each() deprecated since PHP 7.2.0
-//                    while (list($name, $url) = each($menuLinks)){
-//                    DisplayButton($name, $url, !IsURLCurrentPage($url));
-//                    }
                   }  
                   
                   function IsURLCurrentPage($linkAdress){
@@ -146,4 +142,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </nav>
-<script>setTimeout(()=>{showModal()},2000)</script>
+<script>setTimeout(()=>{checkCookie()},2000)</script>

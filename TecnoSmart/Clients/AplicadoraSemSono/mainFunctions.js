@@ -48,9 +48,52 @@
 			hideModal();
 			history.back();
 		}
+		
+		function acceptCookie()
+		{
+			hideModal();
+			setCookie("deniedCookie", 0, 350);
+		}
+		
+		function setCookie(cname, cvalue, exdays)
+		{
+			const d = new Date();
+			d.setTime(d.getTime() + (exdays*24*60*60*1000));
+			let expires = "expires="+ d.toUTCString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+		
+		function getCookie(cname)
+		{
+			let name = cname + "=";
+			let decodedCookie = decodeURIComponent(document.cookie);
+			let ca = decodedCookie.split(';');
+			for(let i = 0; i <ca.length; i++)
+			{
+				let c = ca[i];
+				while (c.charAt(0) == ' ')
+				{
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0)
+				{
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "1";
+		}
+		
+		function checkCookie()
+		{
+			let answer = getCookie("deniedCookie");
+			if (answer != "0")
+			{
+				showModal();
+			}
+		}
 
-
-
+		
+//Image related functions
         function randomNumberInRange(min,max){
             return Math.floor(
                 Math.random()*(max-min)+min
@@ -63,8 +106,10 @@
             zoomedImageElement.style.backgroundImage=url
         }
        
-        var imageRandomHomePage=document.getElementById("randomImg") 
-        function changerRandomImg(){
+        var imageRandomHomePage=document.getElementById("randomImg");
+        
+        function changerRandomImg()
+		{
             imageRandomHomePage.src=arrayOfImgs[randomNumberInRange(0, xElements)]
         }
 
