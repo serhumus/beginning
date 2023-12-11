@@ -42,6 +42,12 @@
 		{
 			$("#exampleModal").modal('show')
 		}
+		
+		function refuseCookie()
+		{
+			hideModal();
+			history.back();
+		}
 
 
 

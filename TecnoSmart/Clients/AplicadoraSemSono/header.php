@@ -45,7 +45,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="modal-footer">
               <button type="button" onclick="hideModal()" class="btn btn-secondary" data-dismiss="modal">Sim!</button>
-              <button type="button" onclick="hideModal()" class="btn btn-primary">Não...</button>
+              <button type="button" onclick="refuseCookie()" class="btn btn-primary">Não...</button>
             </div>
           </div>
         </div>
