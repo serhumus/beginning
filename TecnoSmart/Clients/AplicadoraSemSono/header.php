@@ -44,8 +44,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               Estamos trabalhando para melhorar a experiência no nosso site, por isso utilizamos cookies, concorda com os nossos esforços?
             </div>
             <div class="modal-footer">
-              <button type="button" onclick="acceptCookie()" class="btn btn-secondary" data-dismiss="modal">Sim!</button>
-              <button type="button" onclick="refuseCookie()" class="btn btn-primary">Não...</button>
+              <button type="button" onclick="refuseCookie()" class="btn btn-secondary">Não...</button>
+              <button type="button" onclick="acceptCookie()" class="btn btn-primary" data-dismiss="modal">Sim!</button>
             </div>
           </div>
         </div>

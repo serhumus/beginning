@@ -46,7 +46,7 @@
 		function refuseCookie()
 		{
 			hideModal();
-			history.back();
+			gtag('set', {'allow_google_signals', false});
 		}
 		
 		function acceptCookie()
