@@ -23,7 +23,7 @@
             </ul>
         </div>
         <div class="col-md-6">
-            <img src="imagens/piso-taco-restaurado.jpg" alt="Piso de taco restaurado" class="img-fluid rounded shadow">
+            <img src="Assets/1.jpeg" alt="Piso de taco restaurado" class="img-fluid rounded shadow">
         </div>
     </div>
 

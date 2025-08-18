@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sua Página</title>
+    <title>Aplicadora MC</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand" href="#"><img src="Assets/logo.png"></a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
       aria-controls="navbarMenu" aria-expanded="false" aria-label="Alternar navegação">
@@ -37,3 +37,19 @@
 
 <!-- Bootstrap JS (necessário para o menu retrátil funcionar) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <style>
+          .WhatsAppButton{
+              display: block;
+              top: 77%;
+              left: 70%;
+              position: fixed!important;
+              z-index: 99999;
+          }
+
+          @media only screen and (min-width: 438px){
+              /* For Mobile: */
+              .WhatsAppButton{
+                  left: 77%;
+              }
+          }
+        </style>
