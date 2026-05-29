@@ -1,26 +1,25 @@
 <?php
-        $argumentsOfFloor=array("Durabilidade" =>"Pisos de madeira são muito duráveis e podem durar por décadas, especialmente se forem bem cuidados.","Aparência" => "Um piso de madeira confere um aspecto elegante e acolhedor para a sua casa, além de ser um clássico que nunca sai de moda.", "Versatilidade"=>"Há vários tipos de madeiras e acabamentos disponíveis, o que significa que há opções para se adequar a diferentes estilos de decoração.", "Manutenção" => "Pisos de madeira são relativamente fáceis de limpar e manter. Com os cuidados adequados, eles permanecerão bonitos por anos.", "Saúde" => "Ao contrário de outros materiais de piso, pisos de madeira não acumulam poeira, pelos de animais ou outros alérgenos, por isso são uma boa opção para pessoas com alergias ou problemas respiratórios.", "Sustentabilidade" => "Quando é obtida de fontes responsáveis, usar madeira como material de construção é uma opção sustentável e renovável.");
+$argumentsOfFloorFeatures = array(
+    "Durabilidade" => "Pisos de madeira tratados duram décadas com nossa técnica de raspagem e vedação premium.",
+    "Aparência" => "Sofisticação imobiliária atemporal que aumenta o valor comercial do seu imóvel.", 
+    "Versatilidade" => "Tratamentos foscos, acetinados ou brilhantes adaptáveis ao seu projeto arquitetônico.", 
+    "Manutenção" => "Limpeza simplificada devido às películas seladoras importadas de alta resistência.", 
+    "Saúde" => "Superfícies hipoalergênicas que impossibilitam o acúmulo de ácaros e poeiras tóxicas.", 
+    "Sustentabilidade" => "Madeiras com procedência certificada e restaurações que evitam desperdício florestal."
+);
         
-        function listOfButtons($argumentsOfFloor){
-            while(list($name,$argument)=each($argumentsOfFloor)){
-                echo '<div class="row">';
-                displayButtons($name);
-                displayArgumentsCollapsed($name, $argument);
-                echo '</div>';
-            }
-        }
+function listOfFeatures($argumentsOfFloorFeatures) {
+    echo '<div class="row g-3">';
+    foreach($argumentsOfFloorFeatures as $name => $argument) {
+        echo '<div class="col-md-6">';
+        echo "<button class='btn btn-outline-dark w-100 mb-2 py-2 fw-bold text-start' type='button' data-bs-toggle='collapse' data-bs-target='#feature-$name' aria-expanded='false'>+ $name</button>";
+        echo "<div class='collapse mb-3' id='feature-$name'>
+                <div class='card card-body bg-light border-0'>$argument</div>
+              </div>";
+        echo '</div>';
+    }
+    echo '</div>';
+}
 
-        function displayButtons($name){
-            echo "<button class=\"btn btn-secondary mb-3\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#$name\" aria-expanded=\"false\" aria-controls=\"$name\">$name</button>";
-        }
-        function displayArgumentsCollapsed($name, $argument){
-            echo "<div class=\"col\">
-            <div class=\"collapse multi-collapse\" id=\"$name\">
-              <div class=\"card card-body\">
-                $argument
-              </div>
-            </div>
-          </div>";
-        }
-            listOfButtons($argumentsOfFloor);
-        ?>
+listOfFeatures($argumentsOfFloorFeatures);
+?>

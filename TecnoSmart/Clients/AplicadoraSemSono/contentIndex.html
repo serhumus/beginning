@@ -1,58 +1,72 @@
-<div class="container">
-    <h1 class="pt-5 text-center fw-bold">Aplicadora Sem Sono</h1>
-    <h2 class="pb-4 text-center text-muted">40 anos no mercado entregando qualidade e confiança</h2>
-    <div class="row justify-content-center p-4" >
-      <?php
-      require('ListOfButtonsServices.php');
-      ?>        
-  </div>
-	<div class="row justify-content-center text-center py-5">
-		<p class="lead fst-italic">
-			"Milhares de clientes satisfeitos em todo Brasil. Confiança que faz a diferença."
-		</p>
-	</div>
-  <div class="d-flex justify-content-center p-5" style="min-height:21rem">
-      <div class="d-flex mb-5 justify-content-between align-items-center justify-content-center h-100 mt-3" style="max-height: 70px;">
-          <div class="card shadow-sm" style="max-width: 350px;">
-			  <div class="card-header text-center fw-semibold bg-light">
-				  Algumas das melhores marcas com que trabalhamos
-				  </div>
-            <div class="card-body">
-              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../assets/home/Synteko.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../assets/home/skanyaLogo.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../assets/home/Bona-Logo.jpg" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-  </div>
-    <div class="text-center shadow text-white fw-bold rounded mb-5 p-5"  style="min-height: 350px; background-image: url('../assets/galeria/WhatsApp%20Image%202023-09-18%20at%2012.22.20%20(1).jpeg'); background-repeat: no-repeat; background-position: 49% 49%; background-size: cover; min-height:28em">
-		<div style="background-color:rgba(0,0,0,0.5); padding:2rem; border-radius:8px;">
-			<p class="fs-5" style="text-shadow: 0 0 10px #000;">Trabalhamos com as melhores marcas do mercado e oferecemos uma diversidade de serviços que garantem qualidade e durabilidade.</p>
-			<a class="btn btn-primary btn-lg m-3" href="http://wa.me/5511999670572">Faça um orçamento grátis!</a>
-			<h3 style="text-shadow: 0 0 10px #000 ;">Atendemos empresas e residencias com excelência.</h3>
-		</div>
+<div class="container py-4">
+    <div class="text-center my-5">
+        <h1 class="pt-5 text-center fw-bold">Aplicadora Sem Sono</h1>
+        <h2 class="h4 text-amber-gold fw-bold text-secondary">Há 40 anos transformando ambientes com o melhor acabamento em pisos de madeira do Brasil</h2>
     </div>
-    <div class="row" mb-5">
-		<div class="col-md-4 mb-3">
-			<img id="randomImg" class="img-fluid rounded shadow" src="../assets/galeria/WhatsApp Image 2023-09-18 at 12.22.20 (1).jpeg" alt="Piso de madeira"/>
-		</div>
-		<div class="col-md-8">
-			<h3>Por que escolher pisos de madeira?</h3>
-			<p>Os pisos de madeira são uma opção tradicional e elegante, usados desde a antiguidade pela sua beleza natural e resistência.</p>
-			<p>A popularidade do piso de madeira aumentou com processos avançados que garantem maior durabilidade e acabamento sofisticado.</p>
-			<p>Além de uma solução estética, muitos optam por pisos de madeira devido à sustentabilidade e o cuidado com o meio ambiente.</p>
-			<p>Escolher um piso de qualidade faz toda a diferença no resultado final, pois envolve etapas específicas e materiais superiores.</p>
-			<p>Muitas vantagens esperam por quem opta pela madeira, incluindo valorização do imóvel e conforto térmico.</p>
-		</div>
+
+    <!-- Live Dynamic Accordion Services Hooks -->
+    <div class="row justify-content-center p-2">
+        <div class="col-lg-8">
+            <h3 class="text-center mb-4 fw-bold text-dark">Nossas Especialidades de Alto Padrão</h3>
+            <?php require('ListOfButtonsServices.php'); ?>        
+        </div>
+    </div>
+
+    <!-- Trust Building Statement -->
+    <div class="row justify-content-center text-center py-5 bg-light my-5 rounded border shadow-sm">
+        <p class="lead fst-italic px-4 text-dark m-0">
+            "Mais de 40 anos de tradição unindo maquinário moderno e execução impecável. Quem preza por durabilidade escolhe a Aplicadora Sem Sono."
+        </p>
+    </div>
+
+    <!-- Premium Brands Slider Showcase -->
+    <div class="row justify-content-center my-5">
+         <div class="card shadow border-0 p-0 overflow-hidden" style="max-width: 450px;">
+              <div class="card-header text-center fw-bold bg-dark text-white py-3">
+                   Trabalhamos Exclusivamente com Linhas Premium
+              </div>
+              <div class="card-body bg-white py-4">
+                  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../assets/home/Synteko.png" class="d-block w-75 mx-auto" alt="Synteko">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../assets/home/skanyaLogo.png" class="d-block w-75 mx-auto" alt="Skanya">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../assets/home/Bona-Logo.jpg" class="d-block w-75 mx-auto" alt="Bona">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+         </div>
+    </div>
+
+    <!-- Aggressive Sales CTA Block -->
+    <div class="text-center shadow text-white fw-bold rounded my-5 p-5 d-flex align-items-center" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.75)), url('../assets/galeria/WhatsApp Image 2023-09-18 at 12.22.20 (1).jpeg') no-repeat center/cover; min-height: 25rem;">
+        <div class="w-100 py-3">
+            <p class="fs-3 mb-4">Seu piso novo, recuperado, sem poeira e com brilho sofisticado de cinema.</p>
+            <a class="btn btn-warning btn-lg px-5 py-3 fw-bold text-uppercase text-dark shadow animate-pulse mb-4" href="http://wa.me/5511999670572">Fale Com Um Especialista Agora!</a>
+            <h4 class="fw-semibold text-light">Atendimento Imediato Residencial e Comercial em São Paulo</h4>
+        </div>
+    </div>
+
+    <!-- Editorial Informational Proof Section -->
+    <div class="row my-5 align-items-center">
+        <div class="col-md-5 mb-4 mb-md-0">
+            <img id="randomImg" class="img-fluid rounded shadow-lg w-100" src="../assets/galeria/WhatsApp Image 2023-09-18 at 12.22.20 (1).jpeg" alt="Piso de madeira restaurado"/>
+        </div>
+        <div class="col-md-7 px-md-4">
+            <h3 class="fw-bold text-dark mb-3">Por que Investir na Restauração e Manutenção de Pisos de Madeira?</h3>
+            <p class="text-muted">Os pisos de madeira trazem sofisticação incomparável e conforto térmico definitivo para o seu espaço. Diferente de pisos frios, a madeira valoriza o valor venal do seu imóvel imediatamente.</p>
+            <p class="text-muted">Com o nosso processo exclusivo de raspagem avançada e aplicação de resinas importadas (Bona, Skania e Synteko), eliminamos riscos, manchas e opacidade sem quebrar a estrutura nativa da madeira.</p>
+            <p class="fw-bold text-dark">Vantagens Diretas:</p>
+            <ul class="text-muted">
+                <li>Valorização patrimonial instantânea.</li>
+                <li>Ambientes antialérgicos e fáceis de higienizar.</li>
+                <li>Acabamento sob medida (Fosco, Acetinado ou Brilhante).</li>
+            </ul>
+        </div>
     </div>
 </div>
