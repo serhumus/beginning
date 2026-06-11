@@ -19,13 +19,18 @@
 		</div>
       </div>
   </footer>
-  <div class="b-example-divider mt-4" id="buttom-sentinel"></div>          
+  <!-- The next component is to trigger the animation to show the entire footer dynamically -->
+  <div class="b-example-divider mt-4" id="bottom-sentinel"></div>          
 </div>
 
-<!-- Floating WhatsApp Action Button Fixed Alignment -->
+
+
+<!-- Floating WhatsApp Action Button -->
 <a href="https://wa.me/5511999670572" target="_blank" class="WhatsAppButton" id="waFloatingBtn">
   <img alt="Link direto para o WhatsApp" src="../assets/footer/WhatsappLogo100x102.webp">
 </a>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -36,6 +41,30 @@
      const btn = document.getElementById('waFloatingBtn');
      if(btn) btn.style.display = 'block';
   });
+  //Trigger to footer once when in viewport
+  document.addEventListener('DOMContentLoaded', () => {
+  const sentinel = document.getElementById('bottom-sentinel');
+  const footerCard = document.querySelector('.cardtecnosmart');
+
+  if (sentinel && footerCard) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // If the sentinel is visible on the screen
+        if (entry.isIntersecting) {
+          footerCard.classList.add('is-visible');
+          // Optional: Stop observing once it's visible so it doesn't hide again
+          observer.unobserve(sentinel); 
+        }
+      });
+    }, {
+      root: null, // defaults to the browser viewport
+      threshold: 0.1 // triggers when 10% of the sentinel is visible
+    });
+
+    observer.observe(sentinel);
+	}
+  });
+
 </script>
 </body>
 </html>

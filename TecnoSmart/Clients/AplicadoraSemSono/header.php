@@ -64,6 +64,19 @@
             background: rgba(0, 0, 0, 0.7);
             z-index: -1;
           }
+          
+          .cardtecnosmart {
+			  opacity: 0;
+			  transform: translateY(20px);
+			  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			  visibility: hidden;
+			}
+
+		   .cardtecnosmart.is-visible {
+			   opacity: 1;
+			   transform: translateY(0);
+			   visibility: visible;
+			 }
         </style>
     </head>
     <body class="d-flex flex-column">

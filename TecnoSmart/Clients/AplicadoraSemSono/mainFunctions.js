@@ -112,28 +112,28 @@
             imageRandomHomePage.src=arrayOfImgs[randomNumberInRange(0, xElements)]
         }
 
-            //function to Whatsapp buttom and footer card to tecnosmart.com.br indication
-            hideWhatsappButton=function (){
-                $(".WhatsAppButton").hide("slow");
-                $(".cardtecnosmart").show("slow")
-            };
-            showWhatsappButton=function (){
-                $(".WhatsAppButton").show("slow");
-                $(".cardtecnosmart").hide("slow")
-            };
-            
-            //Load prime link to whatsapp and footer
-            showWhatsappButton()
-            $(".cardtecnosmart").show("slow")
+		//function to Whatsapp buttom
+		hideWhatsappButton=function (){
+			$(".WhatsAppButton").hide("slow");
+		};
+		showWhatsappButton=function (){
+			$(".WhatsAppButton").show("slow");
+		};
+		
+		//Load prime link to whatsapp and footer
+		showWhatsappButton()
+		
 
-            var lastScrollTop = 0;
-            $(window).scroll(function(event){
-                st = $(this).scrollTop();
-                if (st > lastScrollTop){
-                    hideWhatsappButton();
-                    }
-                else {
-                    showWhatsappButton();
-                    }
-                lastScrollTop = st;
-                });
+		var lastScrollTop = 0;
+		$(window).scroll(function(event){
+			st = $(this).scrollTop();
+			if (st > lastScrollTop){
+				hideWhatsappButton();
+				}
+			else {
+				showWhatsappButton();
+				}
+			lastScrollTop = st;
+			});
+		
+		

@@ -7,6 +7,7 @@ require('header.php');
 require('contentIndex.html');
 require('footer.php'); 
 
+//only trigger the slide show when the page have already load the scripts source, avoiding crash..
 echo "
 <script>
     window.addEventListener('load', () => {
