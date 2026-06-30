@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design + Code | Premium Web Solutions</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0d0e12;
+            --surface: #161820;
+            --accent: #6366f1; /* Indigo */
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Glowing background blob */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            opacity: 0.15;
+            filter: blur(100px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        /* Custom CTA Button */
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent-gradient);
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.5);
+        }
+
+        /* Services Grid */
+        .services-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--surface);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .ping {
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .ping::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #10b981;
+            border-radius: 50%;
+            animation: ripple 1.5s infinite ease-in-out;
+        }
+
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 4rem;
+        }
+
+        /* Responsive UI */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero { padding: 4rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">&lt;DevDesign /&gt;</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- Active Status Badge showing visitors you are ready for business -->
+            <div class="status-badge">
+                <span class="ping"></span> Available for Global Contracts
+            </div>
+            
+            <h1>Weaving Custom Code with <span>Stunning Design</span></h1>
+            <p class="subtitle">I build high-performance, pixel-perfect websites designed to turn international traffic into loyal customers.</p>
+            
+            <!-- Replace this link with your actual WhatsApp contact link -->
+            <a href="https://wa.me/5511954710263" class="cta-btn" id="whatsapp-trigger">Let's Build Your Project</a>
+        </section>
+
+        <section class="services-section">
+            <div class="grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <span class="icon">✨</span>
+                    <h3>UI/UX Web Design</h3>
+                    <p>Clean, modern, aesthetic interfaces designed intentionally around user behavior and conversion metrics.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <span class="icon">💻</span>
+                    <h3>Full-Stack Development</h3>
+                    <p>Clean code architecture utilizing robust frameworks. Fast, responsive, scalable, and optimized for SEO.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <span class="icon">📊</span>
+                    <h3>Analytics & Optimization</h3>
+                    <p>Integration with Google Tag Manager and GA4 so you can track your global traffic data accurately without downtime.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tecno Smart. All rights reserved. Serving clients globally.</p>
+    </footer>
+
+</body>
+</html>
