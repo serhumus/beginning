@@ -1,0 +1,1 @@
+This tool consists of a webpage that allows users to instantly calculate the maximum potential loss on their open Binance Futures positions. By securely connecting via Binance API keys, the tool aggregates active positions, entry prices, and liquidation prices to give traders a real-time, worst-case scenario view of their portfolio risk.
